@@ -36,7 +36,11 @@ export const aboutData = [
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key={0} />,
+          <SiAdobexd key={1} />,
+          <SiAdobephotoshop key={2} />,
+        ],
       },
     ],
   },
