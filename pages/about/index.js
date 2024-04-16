@@ -25,13 +25,13 @@ export const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={0} />,
+          <FaCss3 key={1} />,
+          <FaJs key={2} />,
+          <FaReact key={3} />,
+          <SiNextdotjs key={4} />,
+          <SiFramer key={5} />,
+          <FaWordpress key={6} />,
         ],
       },
       {
