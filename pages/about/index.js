@@ -198,35 +198,43 @@ const About = () => {
         >
           <div className="flex mx-auto mb-4 gap-x-4 xl:gap-x-8 xl:mx-0 ">
             {aboutData.map((item, itemIndex) => {
-              <div
-                key={itemIndex}
-                className={`${
-                  index === itemIndex &&
-                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                onClick={() => setIndex(itemIndex)}
-              >
-                {item.title}
-              </div>;
+              return (
+                <div
+                  key={itemIndex} // Add key prop here
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  onClick={() => setIndex(itemIndex)}
+                >
+                  {item.title}
+                </div>
+              );
             })}
           </div>
           <div className="flex flex-col items-center py-2 xl:py-6 gap-y-2 xl:gap-y-4 xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
-              <div
-                key={itemIndex}
-                className="flex flex-col items-center flex-1 md:flex-row max-w-max gap-x-2 text-white/60"
-              >
-                {/* title */}
-                <div className="mb-2 font-light md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
-                <div className="flex gap-x-4">
-                  {/* icons */}
-                  {item.icons?.map((icon, itemIndex) => {
-                    return <div className="text-2xl text-white">{icon}</div>;
-                  })}
+              return (
+                <div
+                  key={itemIndex} // Add key prop here
+                  className="flex flex-col items-center flex-1 md:flex-row max-w-max gap-x-2 text-white/60"
+                >
+                  {/* title */}
+                  <div className="mb-2 font-light md:mb-0">{item.title}</div>
+                  <div className="hidden md:flex">-</div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icons */}
+                    {item.icons?.map((icon, itemIndex) => {
+                      return (
+                        <div key={itemIndex} className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      ); // Add key prop here
+                    })}
+                  </div>
                 </div>
-              </div>;
+              );
             })}
           </div>
         </motion.div>
