@@ -12,7 +12,7 @@ import { fadeIn } from "../../variants";
 
 const Contact = () => {
   return (
-    <div className="h-full bg-primary/30">
+    <div className="h-full ">
       <div className="container flex items-center justify-center h-full py-32 mx-auto text-center xl:text-left">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
@@ -22,9 +22,9 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-12 text-center h2"
+            className="mb-12 text-center text-black h2 "
           >
-            Let's <span className="text-accent ">connect.</span>
+            Napisz do <span className="text-accent ">nas.</span>
           </motion.h2>
           {/* form */}
           <motion.form
@@ -36,12 +36,27 @@ const Contact = () => {
           >
             {/* input group */}
             <div className="flex w-full gap-x-6">
-              <input type="text" placeholder="name" className="input" />
-              <input type="text" placeholder="email" className="input" />
+              <input
+                type="text"
+                placeholder="name"
+                className="placeholder-white bg-black input"
+              />
+              <input
+                type="text"
+                placeholder="email"
+                className="placeholder-white bg-black input"
+              />
             </div>
-            <input type="text" placeholder="subject" className="input" />
-            <textarea placeholder="message" className="textarea"></textarea>
-            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+            <input
+              type="text"
+              placeholder="subject"
+              className="placeholder-white bg-black input"
+            />
+            <textarea
+              placeholder="message"
+              className="placeholder-white bg-black textarea"
+            ></textarea>
+            <button className="btn rounded-full border border-black text-black max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let's talk
               </span>
