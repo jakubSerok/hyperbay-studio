@@ -20,7 +20,7 @@ import {
 //  about data
 export const aboutData = [
   {
-    title: "skills",
+    title: "Umiejętnosci",
     info: [
       {
         title: "Web Development",
@@ -31,7 +31,6 @@ export const aboutData = [
           <FaReact key={3} />,
           <SiNextdotjs key={4} />,
           <SiFramer key={5} />,
-          <FaWordpress key={6} />,
         ],
       },
       {
@@ -45,20 +44,7 @@ export const aboutData = [
     ],
   },
   {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
-    title: "experience",
+    title: "Doświadczenie",
     info: [
       {
         title: "UX/UI Designer - XYZ Company",
@@ -75,7 +61,7 @@ export const aboutData = [
     ],
   },
   {
-    title: "credentials",
+    title: "Kursy",
     info: [
       {
         title: "Web Development - ABC University, LA, CA",
@@ -93,8 +79,6 @@ export const aboutData = [
   },
 ];
 
-// components
-import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
 // framer motion
@@ -117,9 +101,7 @@ const About = () => {
         animate="show"
         exit="hidden"
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <Avatar />
-      </motion.div>
+      ></motion.div>
       <div className="container flex flex-col items-center h-full mx-auto xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex flex-col justify-center flex-1">
@@ -128,10 +110,10 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-black h2"
+            className="text-black h1"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Za każdym <span className="text-accent">wielkim </span> projektem
+            stoi wielka historia.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -156,39 +138,31 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={1} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
-                  Years of experience
+                  Lata w Branży
                 </div>
               </div>
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={15} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
-                  Satisfied clients
+                  Zadowolonych Klientów
                 </div>
               </div>
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={30} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
-                  Finished projects
+                  Zakończynych Projektów
                 </div>
               </div>
               {/* awards */}
-              <div className="relative flex-1">
-                <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
-                  <CountUp start={0} end={8} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
-                  Winning awards
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
