@@ -9,7 +9,7 @@ import { fadeIn } from "../../variants";
 
 const Work = () => {
   return (
-    <div className="flex items-center h-full py-36">
+    <div className="flex items-center h-full py-36 dark:bg-black">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -20,7 +20,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="text-black h2 xl:mt-12"
+              className="text-black h2 xl:mt-12 dark:text-white"
             >
               Nasze Prace <span className="text-accent">.</span>
             </motion.h2>
@@ -29,7 +29,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-black"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-black dark:text-white"
             >
               Przejrzyj nasze portfolio, aby zobaczyć, jakie projekty już
               ukończyliśmy i jak możemy pomóc w wizualizacji Twojej marki

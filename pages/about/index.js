@@ -92,7 +92,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
-    <div className="h-full py-32 text-center xl:text-left">
+    <div className="h-full py-32 text-center xl:text-left dark:bg-black">
       <Circles />
       {/* avatar img */}
       <motion.div
@@ -110,7 +110,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-black h1"
+            className="text-black h1 dark:text-white"
           >
             Za każdym <span className="text-accent">wielkim </span> projektem
             stoi wielka historia.
@@ -120,7 +120,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-black/80"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-black/80 dark:text-white"
           >
             10 years ago, I began freelancing as a developer. Since then, I've
             done remote work for agencies, counsulted for startups, and
@@ -140,7 +140,7 @@ const About = () => {
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
                   <CountUp start={0} end={1} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black dark:text-white">
                   Lata w Branży
                 </div>
               </div>
@@ -149,7 +149,7 @@ const About = () => {
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
                   <CountUp start={0} end={15} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black dark:text-white">
                   Zadowolonych Klientów
                 </div>
               </div>
@@ -158,7 +158,7 @@ const About = () => {
                 <div className="mb-2 text-2xl font-extrabold xl:text-4xl text-accent">
                   <CountUp start={0} end={30} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-black dark:text-white">
                   Zakończynych Projektów
                 </div>
               </div>
@@ -180,11 +180,13 @@ const About = () => {
                 <div
                   key={itemIndex} // Add key prop here
                   className={`${
-                    index === itemIndex ? "text-accent " : "text-black"
+                    index === itemIndex
+                      ? "text-accent "
+                      : "dark:text-white text-black"
                   } ${
                     index === itemIndex &&
                     "after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-black after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-black after:absolute after:-bottom-1 after:left-0 after:dark:bg-white`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -192,7 +194,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className="flex flex-col items-center py-2 text-black xl:py-6 gap-y-2 xl:gap-y-4 xl:items-start">
+          <div className="flex flex-col items-center py-2 text-black dark:text-white xl:py-6 gap-y-2 xl:gap-y-4 xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div

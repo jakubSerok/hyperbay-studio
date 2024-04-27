@@ -15,7 +15,7 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="h-full ">
+    <div className="h-full dark:bg-black">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r ">
         <div className="container flex flex-col justify-center h-full mx-auto text-center xl:pt-40 xl:text-left ">
@@ -26,7 +26,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-black h1"
+            className="text-black h1 dark:text-white"
           >
             Twoja strona, <br />{" "}
             <span className="text-accent">Twoje sukcesy</span>
@@ -37,7 +37,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm mx-auto mb-10 text-black xl:max-w-xl xl:mx-0 xl:mb-16"
+            className="max-w-sm mx-auto mb-10 text-black xl:max-w-xl xl:mx-0 xl:mb-16 dark:text-white"
           >
             Jesteśmy zespołem pasjonatów, specjalizujących się w tworzeniu
             wyjątkowych stron internetowych. Nasze projekty nie tylko zachwycają

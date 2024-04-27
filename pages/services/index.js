@@ -9,7 +9,7 @@ import { fadeIn } from "../../variants";
 
 const Services = () => {
   return (
-    <div className="flex items-center h-full py-36">
+    <div className="flex items-center h-full py-36 dark:bg-black">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -20,7 +20,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="text-black h2 xl:mt-8"
+              className="text-black h2 xl:mt-8 dark:text-white"
             >
               Nasze Usługi <span className="text-accent">.</span>
             </motion.h2>
@@ -29,7 +29,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-black"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-black dark:text-white"
             >
               Oto co oferujemy dla ciebie i twojej firmy. Z myślą o małych i
               wielkich planach.
